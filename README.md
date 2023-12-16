@@ -2,6 +2,12 @@
 
 This repository contains Python scripts demonstrating various image processing techniques using the OpenCV library. Each example focuses on a specific aspect of image processing, providing a simple and educational approach.
 
+Before running the scripts, make sure you have OpenCV installed. You can install it using the following command:
+
+```bash
+pip install opencv-python
+```
+
 ## Table of Contents
 
 1. [Rotating Images](#rotating-images)
