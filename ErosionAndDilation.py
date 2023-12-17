@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Specify the path to your image
-image_path = r"C:\Users\nacwo\Desktop\open cv sample\sampleImage.jpg"
+image_path = r".\sampleImage.jpg"
 
 # Read the image
 image = cv2.imread(image_path)

@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 # Specify the paths to your source and target images
-source_path = r"C:\Users\nacwo\Desktop\open cv sample\source_image.jpg"
-target_path = r"C:\Users\nacwo\Desktop\open cv sample\target_image.jpg"
+source_path = r".\source_image.jpg"
+target_path = r".\target_image.jpg"
 
 # Read the source and target images
 source_image = cv2.imread(source_path)
