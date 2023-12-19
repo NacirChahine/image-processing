@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 
 # Specify the path to your image
 image_path = r".\sampleImage.jpg"

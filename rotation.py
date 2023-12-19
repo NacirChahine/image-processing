@@ -7,7 +7,7 @@ image_path = r".\sampleImage.jpg"
 image = cv2.imread(image_path)
 
 # Specify the rotation angle (in degrees)
-angle = 45
+angle = 90
 
 # Get the height and width of the image
 height, width = image.shape[:2]

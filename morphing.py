@@ -17,15 +17,18 @@ source_points = np.array([[50, 50], [300, 50], [50, 200], [300, 200]], dtype=np.
 target_points = np.array([[70, 80], [320, 60], [90, 230], [310, 210]], dtype=np.float32)
 
 # Calculate the morphing parameters
-morphing_percentage = 0.5  # Adjust the percentage for different morphing stages
-interpolated_points = (1 - morphing_percentage) * source_points + morphing_percentage * target_points
+num_frames = 30  # Adjust the number of frames for the animation
+for frame in range(num_frames):
+    morphing_percentage = frame / (num_frames - 1)  # Vary the percentage over frames
 
-# Perform the morphing
-morphed_image = cv2.warpPerspective(source_image, cv2.getPerspectiveTransform(source_points, interpolated_points), (source_image.shape[1], source_image.shape[0]))
+    # Interpolate points based on the morphing percentage
+    interpolated_points = (1 - morphing_percentage) * source_points + morphing_percentage * target_points
 
-# Display the source, target, and morphed images
-cv2.imshow("Source Image", source_image)
-cv2.imshow("Target Image", target_image)
-cv2.imshow("Morphed Image", morphed_image)
-cv2.waitKey(0)
+    # Perform the morphing
+    morphed_image = cv2.warpPerspective(source_image, cv2.getPerspectiveTransform(source_points, interpolated_points), (source_image.shape[1], source_image.shape[0]))
+
+    # Display the morphed image
+    cv2.imshow("Morphing Animation", morphed_image)
+    cv2.waitKey(50)  # Adjust the delay between frames (in milliseconds)
+
 cv2.destroyAllWindows()

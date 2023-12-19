@@ -38,7 +38,7 @@ python interpolationMethods.py
 ```
 
 ## Warping
-Morph one image into another by defining corresponding points in both images. The script illustrates a smooth transition between a source and target image.
+Warp an image by defining source and destination points. The script showcases the effect of perspective transformations on the original image.
 ```bash
 python warp.py
 ```
